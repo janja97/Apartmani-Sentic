@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Open+Sans:wght@300;500;700&display=swap');
+/*
+var
+*/
+$font-family: 'Open Sans', sans-serif;
+
+$font-title: 'Charmonman', cursive;
+$crna: #1a1a1a;
+$bijela: #e6e6e6;
+$tsiva: #333333;
+$siva: #595959;
+$plava:#467088;
+$font-size:16px;
+/*
+basic style
+*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+a{
+    text-decoration: none;
+}
+/*
+nav
+*/
+nav{
+    background: $bijela;
+    .navbar-brand{
+        line-height: 40px;//razmak izmedu redova
+        font-family: $font-title;
+        font-size: 2.7rem;
+        font-weight: 900;
+        color:$tsiva;
+        span{
+            font-size:30px;
+        }
+        &:hover{
+            color: $tsiva;
+        }
+    }
+    span{
+        color:$tsiva;
+        &:hover{
+            color: $tsiva;
+        }
+    }
+    .nav-link{
+        color: $tsiva;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;//razmak izmedu slova
+
+    }
+    
+}
+/*
+header
+*/
+.header{
+    //background: url("img/header.jpg");
+    // width: 1050px;
+    // height: auto;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    h1{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-top: -100px;
+        font-family: $font-title;
+        color: $crna;
+    }
+}
+/*
+opcenito
+*/ 
+.opcenito{
+    margin-top: 100px;
+    padding: 0 130px ;
+    h3{
+        font-family: $font-family;
+        font-size: 2rem;
+        font-weight: 200;
+        color: $tsiva;
+    }
+}
+.galeri{
+    
+    img{
+        
+        width:auto;
+        height: 200px;
+        
+    }
+}
+/*
+footer
+*/ 
+.footer{
+    background: $bijela;
+    margin: auto;
+    color: $tsiva;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 0px;
+    h1{
+        line-height: 40px;//razmak izmedu redova
+        font-family: $font-title;
+        font-size: 2.7rem;
+        font-weight: 900;
+        span{
+            font-size: 2rem;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+    }
+    h3{
+        font-size: 2rem;
+
+    }
+
+}
+/*
+galerija
+*/ 
+.kartice{
+    padding-top:100px;
+    
+    .row{
+        .col-md-4{
+            background: #e6e6e6;
+            //border-radius: 5px;
+            padding: 10px;
+            //margin: 10px;
+            h4{
+                font-size: 2rem;
+                font-weight: 500;
+
+            }
+            button{
+                border: none!important;
+                box-shadow:none!important;
+                
+                &:hover{
+                    border: none!important;
+                    box-shadow:none!important;
+
+                }
+                
+            }
+        }
+    }
+}
+/*
+aktivnosti
+*/ 
+.aktivnosti{
+    .row{
+        .col-md-12{
+            display: flex;
+            //flex-wrap: wrap;
+            //padding-top: 10px;
+
+
+            @media (max-width: 800px) {
+                 
+                  flex-direction: column;
+            
+            }
+            .text{
+                padding-top: 100px;
+                flex:0 0 50%;
+                //display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h4{
+                    padding-bottom: 30px;
+                }
+            }
+            .img{
+                flex: 0 0 50%;
+               img{
+                    width: 100%;
+                    height: auto;
+                //flex-wrap: wrap;
+               }
+            }
+            // &:nth-child(even).text{
+            //     order:1;
+            // }
+            // &:nth-child(even) .img{
+            //     order: 2;
+            // }
+            @media (max-width: 800px) {
+                 
+                 &:nth-child(even).text{
+                        order:1;
+                    }
+                    &:nth-child(even) .img{
+                        order: 2;
+                    }
+          
+          }
+        }
+       
+    }
+}
+
